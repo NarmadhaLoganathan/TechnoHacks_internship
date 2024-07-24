@@ -1,0 +1,343 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+    font-family:'Roboto',sans-serif;
+}
+
+.header{
+    min-height:100vh;
+    background-image:linear-gradient(rgba(12, 12, 12, 0.38),rgba(0, 0, 0, 0.38)),url("/images/img.jpeg");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.navbar{
+    width:100%;
+    color:#570b7a;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 60px;
+}
+.navbar .logo{
+    font-size:35px;
+    text-transform:uppercase;
+    font-weight:500;
+    margin:10px 0px;
+}
+.nav-menu ul{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.nav-menu ul li{
+    list-style: none;
+    padding:10px 20px;
+    
+    cursor:pointer;
+}
+.nav-menu ul li a{
+    text-decoration:none;
+    font-size:18px;
+    color:#ffffff;
+}
+.nav-menu ul li:hover{
+    border-bottom: 2px solid #420558;
+}
+.toggle-btn{
+    position:absolute;
+    top:28px;
+    right:60px;
+    display:none;
+    justify-content:space-between;
+    flex-direction:column;
+    height:22px;
+    width:32px;
+}
+.toggle-btn .bar{
+    height:4px;
+    width:100%;
+    background-color:#fff;
+    border-radius:10px;
+}
+.content-section{
+    width:100%;
+    position:absolute;
+    top:48%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align: center;
+}
+.content-section h1{
+    margin-top: 15px;
+    color:#1a1a1a;
+    font-size:50px;
+    font-weight:700;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+.content-section p{
+    
+    padding-bottom: 200px;
+    color: #034b50;
+    font-size:19px;
+    margin-top:10px;
+    
+    line-height:1.5;
+
+}
+ header .button a{
+    
+    text-align: center;
+    text-decoration:none;
+    font-size:20px;
+    color:#fff;
+    display:inline-block;
+    background-color:#524782;
+    border-radius:5px;
+    padding:14px 25px;
+    letter-spacing:1.5px;
+}
+.content-section .button a:hover{
+    background-color:#6012ad;
+    transition:0.5s ease;
+}
+@media(max-width:768px){
+    .toggle-btn{
+        display:flex;
+        z-index:2;
+    }
+    .nav-menu ul{
+        width:100%;
+        background-color:#508089;
+        flex-direction: column;
+        align-items:center;
+        padding-right:0px;
+        position:absolute;
+        text-align:center;
+        justify-content:center;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        z-index:1;
+    }
+   .nav-menu{
+    display:flex;
+    width:100%;
+   }
+   .nav-menu ul li{
+    margin:10px 0px;
+   }
+   .nav-menu ul li a{
+    font-size:25px;
+   }
+   .navbar .logo{
+    font-size:29px;
+   }
+   .content-section h1{
+    font-size:40px;
+   }
+   .content-section p{
+    font-size:16px;
+   }
+   .content-section .button a{
+    font-size:17px;
+    padding:9px 15px;
+   }
+   nav-menu.active{
+    display:flex;
+   }
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#free-courses {
+    background-color: #e9e1fc;
+    padding: 60px 0;
+}
+
+#free-courses h2 {
+    color:#470054;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#free-courses p {
+    font-size: 1.1rem;
+    color: #000000;
+}
+
+.course-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+}
+
+.course-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.course-card .card-body {
+    padding: 20px;
+}
+
+.course-card .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color:#3c0b50 !important;
+}
+
+.course-card .card-text {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    transition: opacity 0.3s ease;
+}
+
+.course-card .course-info {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color:#2e013e;
+    background-color: rgba(193, 193, 193, 0.95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+.course-card:hover .course-info {
+    opacity: 1;
+}
+#testimonials {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+#testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#testimonials p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.testimonial {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.testimonial p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.blockquote-footer {
+    font-size: 0.9rem;
+    color: #777;
+}
+.testimonial:hover{
+    transform: translateY(-10px);
+    transition: 1s;
+    background-color: #dabce6 !important;
+}
+.btn-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.btn-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.accordion .card {
+    border: none;
+}
+
+.accordion .card-header {
+    background-color: #cdc2ff;
+    border-bottom: 1px solid #c5b5b5;
+}
+
+.accordion .card-body {
+    border-top: 1px solid #ddd;
+}
+.about-section {
+   
+    background-color: #b9b9d6;
+    padding: 5px 0;
+}
+
+.about-section .about-content {
+    text-align: left;
+}
+
+.about-section h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(25, 3, 55);
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.about-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-section ul li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.about-section ul li::before {
+    content: "\2713";
+    color: #007bff;
+    font-weight: bold;
+    display: inline-block;
+    width: 20px;
+    margin-right: 10px;
+}
+
+#fix-img{
+    max-width: 90%;
+    height:250px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 2px;
+    margin-bottom: 10px;
+}
